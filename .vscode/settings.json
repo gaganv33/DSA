@@ -3,6 +3,9 @@
     "files.associations": {
         "*.ejs": "html",
         "iostream": "cpp",
-        "xutility": "c"
+        "xutility": "c",
+        "ostream": "cpp",
+        "xstring": "cpp",
+        "string": "cpp"
     }
 }
