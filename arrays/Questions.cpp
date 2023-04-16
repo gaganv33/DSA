@@ -9,6 +9,7 @@ void reverseArray(int arr[], int n);
 int removeDuplicates(int arr[], int n);
 void leftRotate(int arr[], int n);
 void leftRotateByD(int arr[], int n, int d);
+void moveZerosEnd(int arr[], int n);
 
 int main(){
     int n, arr[1000];
@@ -37,6 +38,7 @@ int main(){
     int d;
     cin>>d;
     leftRotateByD(arr, n, d);
+    moveZerosEnd(arr, n);
     return 0;
 }
 int largestElement(int arr[], int n){
@@ -146,5 +148,30 @@ void leftRotate(int arr[], int n){
     cout<<endl;
 }
 void leftRotateByD(int arr[], int n, int d){
-    
+    int temp[n];
+    for(int i = 0; i < d; i++){
+        temp[n - d + i] = arr[i];
+    }
+    for(int i = d; i < n; i++){
+        temp[i - d] = arr[i];
+    }
+    for(int i =0 ; i < n; i++){
+        cout<<temp[i]<<" ";
+    }
+    cout<<endl;
+}
+void moveZerosEnd(int arr[], int n){
+    int count = 0;
+    for(int i = 0; i < n; i++){
+        if(arr[i] != 0){
+            int temp = arr[count];
+            arr[count] = arr[i];
+            arr[i] = temp;
+            count++;
+        }
+    }
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
 }
