@@ -30,7 +30,7 @@ struct HashMap{
 				return i;
 			}
 			else{
-				i = (i + (index * offset)) % cap;
+				i = (h + (index * offset)) % cap;
 				index = index + 1;
 			}
 			if(i == h){
@@ -49,7 +49,7 @@ struct HashMap{
 		int index = 1;
 		int i = h;
 		while(arr[i][0] != -1 && arr[i][0] != key){
-			i = (i + (index * offset)) % cap;	
+			i = (h + (index * offset)) % cap;	
 			index = index + 1;		
 		}
 		if(arr[i][0] == key){
@@ -64,10 +64,6 @@ struct HashMap{
 		}
 	}
 	int update(int key){
-		int h = hash(key);
-		int offset = new_hash(key);
-		int index = 1;
-		int i = h;
 		
 		int pos = search(key);
 		if(pos == -1){

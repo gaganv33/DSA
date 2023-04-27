@@ -28,7 +28,7 @@ struct HaspMap{
 			if(arr[i] == key)
 				return 1;
 			else{
-				i = (i + (index * offset)) % cap;
+				i = (h + (index * offset)) % cap;
 				index = index + 1;
 			}
 			if(i == h)
@@ -45,7 +45,7 @@ struct HaspMap{
 		int i = h;
 		int index = 1;
 		while(arr[i] != -1 && arr[i] != -2 && arr[i] != key){
-			i = (i + (index * offset)) % cap;
+			i = (h + (index * offset)) % cap;
 			index = index + 1;
 		}
 		if(arr[i] == key){
@@ -69,7 +69,7 @@ struct HaspMap{
 				return 1;
 			}	
 			else{
-				i = (i + (index * offset)) % cap;
+				i = (h + (index * offset)) % cap;
 				index = index + 1;	
 			}
 			if(i == h)

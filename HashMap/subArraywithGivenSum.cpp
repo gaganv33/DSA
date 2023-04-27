@@ -29,7 +29,7 @@ struct HashMap{
 				return i;
 			}
 			else{
-				i = (i + (index * offset)) % cap;
+				i = (h + (index * offset)) % cap;
 				index = index + 1;
 			}
 			if(i == h){
@@ -47,7 +47,7 @@ struct HashMap{
 		int offset = hash2(key);
 		int i = h;
 		while(arr[i] != -1 && arr[i] != -2 && arr[i] != key){
-			i = (i + (index * offset)) % cap;
+			i = (h + (index * offset)) % cap;
 			index = index + 1;
 		}
 		if(arr[i] == key){
