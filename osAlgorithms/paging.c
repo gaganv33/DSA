@@ -30,7 +30,7 @@ int main(){
             count -= m;
             for(int j = 0; j < m; j++){
                 int index;
-                scanf("%d", &index);
+                scanf("%d", &index);    
                 if(index >= nop){
                     printf("Invalid index\n");
                 }
