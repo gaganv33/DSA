@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\19138\\DSA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\19138\\DSA\\arrays\\allocateMinimumNoOfPages.cpp||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:arrays\\allocateMinimumNoOfPages.cpp||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\19138\\DSA\\CSES\\main.cpp||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CSES\\main.cpp||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "allocateMinimumNoOfPages.cpp",
-              "DocumentMoniker": "C:\\Users\\19138\\DSA\\arrays\\allocateMinimumNoOfPages.cpp",
-              "RelativeDocumentMoniker": "arrays\\allocateMinimumNoOfPages.cpp",
-              "ToolTip": "C:\\Users\\19138\\DSA\\arrays\\allocateMinimumNoOfPages.cpp",
-              "RelativeToolTip": "arrays\\allocateMinimumNoOfPages.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAAaAAAA",
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\19138\\DSA\\CSES\\main.cpp",
+              "RelativeDocumentMoniker": "CSES\\main.cpp",
+              "ToolTip": "C:\\Users\\19138\\DSA\\CSES\\main.cpp",
+              "RelativeToolTip": "CSES\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-07-07T17:45:52.654Z",
+              "WhenOpened": "2024-12-06T10:00:15.837Z",
               "EditorCaption": ""
             }
           ]

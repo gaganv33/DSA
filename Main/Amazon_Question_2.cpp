@@ -87,7 +87,49 @@ bool compareDescending(pair<int, int> &a, pair<int, int> &b) {
 }
  
 void gagan() {
+	int n;
+	cin >> n;
+	vector<int> a(n), b(n);
+	input(n, a);
+	input(n, b);
 	
+	// {pages, threshold}
+	vector<pair<int, int>> v;
+	
+	for(int i = 0; i < n; i++) {
+		v.push_back({a[i], b[i]});
+	}
+	sort(v.begin(), v.end(), compareDescending);
+	
+	for(auto x : v) {
+		cout << x.first << " " << x.second << endl;
+	}
+	
+	int ans = 0;
+	int count = 0;
+	int index = 0;
+	vector<int> visited;
+	
+	while(index < n) {
+		pair<int, int> p = v[index];
+		if(p.second > count) {
+			count++;
+			ans += p.first;
+			visited.push_back(p.second);
+			index++;
+		} else {
+			while(index < n && v[index].second <= count) {
+				index++;
+			}
+			vector<int> b;
+			for(int i = 0; i < (int) visited.size(); i++) {
+				if(visited[i] > count) b.push_back(visited[i]);
+				else count--;
+			}
+			visited = b;
+		}
+	}
+	cout << ans << endl;
 }
  
 int main() {

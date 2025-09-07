@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\arrays"
+    "\\CSES",
+    "\\CSES\\Graph"
   ],
-  "SelectedNode": "\\arrays\\allocateMinimumNoOfPages.cpp",
+  "SelectedNode": "\\CSES\\Graph\\Counting Rooms.cpp",
   "PreviewInSolutionExplorer": false
 }

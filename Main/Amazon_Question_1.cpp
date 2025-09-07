@@ -74,20 +74,49 @@ void dfs(int node, vector<vector<int>> &v, vector<bool> &visit) {
 	}
 }
 
-void input(int n, vector<int> &a) {
-	for(int i = 0; i < n; i++) cin >> a[i];
+void output(map<char, int> m) {
+	cout << "[printing]" << endl;
+	for(auto x : m) {
+		cout << x.first << " " << x.second << endl;
+	}
 }
 
-bool compareDescending(pair<int, int> &a, pair<int, int> &b) {
-	if (a.second != b.second) {
-        return a.second < b.second;
-    } else {
-        return a.first > b.first;
-    }
+bool check(map<char, int> a, map<char, int> b, int target) {
+	int count = 0;
+	for(auto x : a) {
+		if(b.find(x.first) != b.end()) {
+			count++;
+		}
+	}
+	return count > target;
 }
  
 void gagan() {
+	string s;
+	int k;
+	cin >> s >> k;
+	int n = s.size();
+	vector<map<char, int>> pre (n, map<char, int> ());
+	vector<map<char, int>> suf (n, map<char, int> ());
 	
+	pre[0][s[0]]++;
+	for(int i = 1; i < n; i++) {
+		map<char, int> temp = pre[i - 1];
+		temp[s[i]]++;
+		pre[i] = temp;
+	}
+	
+	suf[n - 1][s[n - 1]]++;
+	for(int i = n - 2; i >= 0; i--) {
+		map<char, int> temp = suf[i + 1];
+		temp[s[i]]++;
+		suf[i] = temp;
+	}
+	int ans = 0;
+	for(int i = 0; i < n - 2; i++) {
+		if(check(pre[i], suf[i + 1], k)) ans++;
+	}
+	cout << ans << endl;
 }
  
 int main() {
